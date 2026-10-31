@@ -1,0 +1,14 @@
+{
+  "name": "Simple Tasks",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "forwardPorts": [
+    3000
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Список задач",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "postStartCommand": "bash -lc 'nohup npm start > /tmp/test-open-app.log 2>&1 &'"
+}
